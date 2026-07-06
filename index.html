@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk</title>
+    <link href="css.css" rel="stylesheet">
+     <link href="ts.ts" rel="ts">
+<body>
+
+    <!-- ЭКРАН ПРИВЕТСТВИЯ С ИСПРАВЛЕННЫМ ТЕКСТОМ -->
+<div id="welcome-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; font-family: 'CosiArm', 'ArshaluyseArtU-Bold', sans-serif; padding: 20px; box-sizing: border-box; text-align: center;">
+  
+  <!-- Нежный пастельный градиент на заднем фоне -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #e6e1da 0%, #f5f2eb 50%, #dfd9d0 100%); z-index: -1;"></div>
+  
+  <!-- Изящная карточка-конверт (ширина увеличена до 420px) -->
+  <div style="background: rgba(255, 255, 255, 0.75); padding: 45px 30px; border-radius: 24px; box-shadow: 0 15px 35px rgba(165, 155, 145, 0.25); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); max-width: 420px; width: 100%; border: 1px solid rgba(255, 255, 255, 0.6); box-sizing: border-box;">
+    
+    <!-- Золотисто-бежевый крестик -->
+    <div style="font-size: 32px; margin-bottom: 20px; color: #c5b3a7; line-height: 1;">✝</div>
+    
+    <h2 style="font-size: 20px; color: #5a5752; margin-bottom: 6px; font-weight: normal; letter-spacing: 3px;">ՄԿՐՏՈՒԹՅԱՆ</h2>
+    <h1 style="font-size: 24px; font-family: 'CosiArm', sans-serif; color: #5a5752; margin-bottom: 10px; font-weight: normal; letter-spacing: 2px;">ՀՐԱՎԵՐ</h1>
+    
+    <!-- Размер шрифта уменьшен до 18px и добавлено автоперенесение, чтобы длинное слово не вылезало -->
+    <h1 style="font-size: 18px; font-family: 'CosiArm', sans-serif; color: #5a5752; margin-bottom: 35px; font-weight: normal; letter-spacing: 1px; word-wrap: break-word; overflow-wrap: break-word;">Համբարձումյաններ</h1>
+    
+    <button onclick="startInvitation()" style="background-color: #c5b3a7; color: white; border: none; padding: 15px 40px; font-size: 15px; border-radius: 30px; cursor: pointer; box-shadow: 0 6px 20px rgba(197, 179, 167, 0.4); transition: transform 0.2s ease, background-color 0.2s ease; font-family: inherit; letter-spacing: 2px; width: 100%; font-weight: bold;">
+      ԲԱՑԵԼ
+    </button>
+  </div>
+</div>
+
+<!-- Скрытый плеер с вашей песней -->
+<audio id="bg-music" src="Hallelujah.mp3" loop></audio>
+
+<script>
+  function startInvitation() {
+    var audio = document.getElementById("bg-music");
+    audio.play().catch(function(error) {
+      console.log("Ошибка воспроизведения аудио:", error);
+    });
+    
+    var overlay = document.getElementById("welcome-overlay");
+    overlay.style.opacity = "0";
+    overlay.style.visibility = "hidden";
+  }
+</script>
+
+
+<div class="pp">
+    <div class="container">  
+
+
+        <section id="hero">
+
+            <div class="sub-title">Մկրտության հրավեր</div>
+
+            <div class="sub-" >Համբարձումյաններ</div>
+
+            <div class="divider"></div>
+
+            <div class="date-main">18.08.2026</div>
+
+        </section>
+
+
+
+        <section id="invitation-text">
+
+            <p>Սիրով հրավիրում ենք Ձեզ՝ կիսելու մեզ հետ մեր կյանքի կարևորագույն օրը։</p>
+
+            <div class="divider"></div>
+
+        </section>
+
+
+
+        <section id="calendar">
+
+            <div class="calendar-card">
+
+                <div class="calendar-month">Օգոստոս</div>
+
+                <div class="calendar-year">2026</div>
+
+               
+
+                <div class="weekdays">
+
+                    <span>Երկ</span><span>Երք</span><span>Չոր</span><span>Հնգ</span><span>Ուրբ</span><span>Շբթ</span><span>Կիր</span>
+
+                </div>
+
+                <div class="days">
+
+                    <span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span>
+
+                    <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+
+                    <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+
+                    <span>16</span><span>17</span><span class="active">18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+
+                    <span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span>
+
+                    <span>30</span><span>31</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="njkhl">
+
+            <div class="event-box">
+
+                <div class="event-title">Մկրտության</div>
+
+                <div class="time">16:30</div>
+
+                <div class="location">Մուղնու Սուրբ Գևորգ</div>
+
+                <a href="https://yandex.com/maps/?ll=44.370884%2C40.314673&mode=routes&rtext=~40.315020%2C44.371641&rtt=comparison&ruri=~&z=19.64" class="btn-map">Քարտեզ</a>
+
+            </div>
+
+
+
+            <div class="divider"></div>
+
+
+
+            <div class="event-box">
+
+                <div class="event-title">Ռեստորանային Համալիր</div>
+
+                <div class="time">18:00</div>
+
+                <div class="location">Wine Corner Ashtarak</div>
+
+                <a href="https://yandex.com/maps/org/wine_corner/139778273402/?ll=44.355975%2C40.284220&z=13" class="btn-map">Քարտեզ</a>
+
+            </div>
+
+        </section>
+
+
+
+      <div class="rsvp-section">
+
+            <div class="rsvp-form"> <h3>Հաստատել մասնակցությունը</h3> </div>
+
+            <div class="tablet">
+
+            <form action="https://formsubmit.co/yeghiazarianalisa@gmail.com" method="POST">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_subject" value="Նոր պատասխան մկրտության հրավերին">
+
+               
+
+                <div class="form-group">
+
+                    <label class="form-label">Անուն, Ազգանուն </label>
+
+                    <input type="text" name="Անուն Ազգանուն" class="input-field" placeholder="Անուն, Ազգանուն" required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                <div class="radio-group">
+
+                    <label class="radio-label">
+
+                        <input type="radio" name="attendance" value="yes" checked> Գալիս եմ / Գալիս ենք
+
+                    </label>
+
+                    <label class="radio-label">
+
+                        <input type="radio" name="attendance" value="no"> Ցավոք, չեմ կարողանա
+
+                    </label>
+
+                </div>
+
+                </div>
+
+
+
+                <div class="event-box">
+
+                     <div class="form-group">
+
+                    <label class="form-label"> <H4>Մեծերի քանակ</H4> </label>
+
+                    <input type="text" name="Մեծերի քանակ" class="input-field" placeholder="Մեծերի քանակ" required>
+
+                </div>
+                    <div class="form-group">
+
+                    <label class="form-label"> <H4>Փոքրերի քանակ </H4></label>
+
+                    <input type="text" name="Փոքրերի քանակ" class="input-field" placeholder="Փոքրերի քանակ" required>
+
+                </div>
+
+            </div>
+                <div class="form-group">
+                    <label class="form-label"><h4>Մեկնաբանություն (ցանկության դեպքում)</h4></label><br>
+                    <input type="text" name="Մեկնաբանություն" class="input-field" placeholder="Ձեր մեկնաբանությունը">
+                </div>
+                 </div>
+                 <button type="submit" class="btn-submit">Ուղարկել</button>
+            </form>
+            </div>
+        </div>
+    </div>
+<footer>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+</footer>
+</div>
+</body>
+</html>
